@@ -1,0 +1,9 @@
+2024-08-30 19:47:30.451 | INFO     | __main__:divide_by:21 - calculating..
+2024-08-30 19:47:30.452 | DEBUG    | __main__:divide_by:22 - calculating.. a=2, b=0
+2024-08-30 19:47:30.452 | WARNING  | __main__:divide_by:23 - b shouldnd be zero
+2024-08-30 19:47:30.453 | CRITICAL | __main__:<module>:30 - devision by 0 !!
+2024-08-30 19:48:36.752 | INFO     | __main__:divide_by:21 - calculating..
+2024-08-30 19:48:36.753 | DEBUG    | __main__:divide_by:22 - calculating.. a=2, b=0
+2024-08-30 19:48:36.753 | WARNING  | __main__:divide_by:23 - b shouldnd be zero
+2024-08-30 19:48:36.753 | CRITICAL | __main__:<module>:30 - division by 0 !!
+2024-08-30 19:48:36.754 | ERROR    | __main__:<module>:31 - division by 0 !!
