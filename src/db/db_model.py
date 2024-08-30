@@ -14,7 +14,6 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from config import db_settings
 
 
-
 class Base(DeclarativeBase):
     """Base class for SQLAlchemy models."""
 
