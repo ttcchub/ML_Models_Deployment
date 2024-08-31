@@ -21,10 +21,12 @@ jobs:
       with:
         python-version: '3.12.1'
   
-    - name: Install poetry
-      run: |
-        curl -sSL https://install.python-poetry.org | python3 -
-        export PATH="$HOME/.local/bin:$PATH"
+    - name: Install 
+      uses: knowsuchagency/poetry-install@v1
+
+      # run: |
+      #   curl -sSL https://install.python-poetry.org | python3 -
+      #   export PATH="$HOME/.local/bin:$PATH"
     
     - name: Install dependencies using poetry
       run: poetry install
