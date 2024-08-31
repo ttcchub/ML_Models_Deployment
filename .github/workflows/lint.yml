@@ -22,14 +22,28 @@ jobs:
         python-version: '3.12.1'
   
     - name: Install poetry
-      uses: knowsuchagency/poetry-install@v1
+      # uses: knowsuchagency/poetry-install@v1
+      uses: snok/install-poetry@v1
+      with: 
+        virtualenvs-in-project: true
+
+
+
+    - name: Load cached venv
+      uses: actions/cache@v4
+      id: cached-poetry-dependencies
+      with: 
+        path: .venv
+        key: venv-${{runner.os}}-${{hashFiles('**/poetry.lock')}}
+
     
     # run: |
       #   curl -sSL https://install.python-poetry.org | python3 -
       #   export PATH="$HOME/.local/bin:$PATH"
     
     - name: Install dependencies using poetry
-      run: poetry install
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      run: poetry run make install
 
     - name: Lint with flake8
       run: poetry run make check
